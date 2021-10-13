@@ -71,7 +71,7 @@ booky.get("/c/:category", async (req,res) => {
   const getSpecificBook = await BookModel.findOne({category: req.params.category});
 
   
-  if(!getSpecificBook) {
+  if(!getSpecificBook){
 
     return res.json({error: `No book found for the category of ${req.params.category}`});
     
